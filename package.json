@@ -35,7 +35,8 @@
   },
   "eslintIgnore": [
     "node_modules/",
-    "dist/"
+    "dist/",
+    "modern.config.js"
   ],
   "dependencies": {
     "@modern-js/runtime": "^1.0.0",
@@ -52,14 +53,5 @@
     "@types/react": "^17",
     "@types/react-dom": "^17",
     "typescript": "^4"
-  },
-  "modernConfig": {
-    "runtime": {
-      "router": true,
-      "state": true
-    },
-    "server": {
-      "ssr": true
-    }
   }
 }

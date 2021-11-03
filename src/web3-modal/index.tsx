@@ -20,17 +20,10 @@ const providerOptions = () => ({
 
 const getWeb3Modal = () => {
   const web3modal = new Web3Modal({
-    network: 'testnet',
     providerOptions: providerOptions(),
     cacheProvider: true,
     // disableInjectedProvider: true,
-    theme: {
-      background: 'rgb(39, 49, 56)',
-      main: 'rgb(199, 199, 199)',
-      secondary: 'rgb(136, 136, 136)',
-      border: 'rgba(195, 195, 195, 0.14)',
-      hover: 'rgb(16, 26, 32)',
-    },
+    theme: 'light',
   });
   return web3modal;
 };
@@ -45,6 +38,13 @@ export const ConnectButtons = () => {
   useEffect(() => {
     setWeb3modal(getWeb3Modal());
   }, []);
+
+  // auto connect.
+  useEffect(() => {
+    if (web3modal.cachedProvider) {
+      handleConnect();
+    }
+  }, [web3modal]);
 
   const handleConnect = useCallback(async () => {
     const provider = await web3modal.connect();

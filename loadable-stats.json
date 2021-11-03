@@ -1,0 +1,211 @@
+{
+  "name": "client",
+  "hash": "f05657f8594af766328c",
+  "publicPath": "/",
+  "outputPath": "/Users/yolin/projects/example/modernjs/dist",
+  "assetsByChunkName": {
+    "main": [
+      "static/css/main.3834b256.css",
+      "static/js/main.7f0de80f.js"
+    ],
+    "runtime-main": [
+      "static/js/runtime-main.adb5035d.js"
+    ]
+  },
+  "assets": [
+    {
+      "type": "asset",
+      "name": "static/js/54.a218d9d0.js",
+      "size": 2895981,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "immutable": true,
+        "contenthash": "a218d9d0",
+        "javascriptModule": false,
+        "minimized": true,
+        "related": {
+          "license": "static/js/54.a218d9d0.js.LICENSE.txt",
+          "sourceMap": "static/js/54.a218d9d0.js.map"
+        }
+      },
+      "chunkNames": [],
+      "chunkIdHints": [
+        "vendors"
+      ],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "filteredRelated": 2,
+      "chunks": [
+        54
+      ],
+      "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "static/js/main.7f0de80f.js",
+      "size": 6361,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "immutable": true,
+        "contenthash": "7f0de80f",
+        "javascriptModule": false,
+        "minimized": true,
+        "related": {
+          "sourceMap": "static/js/main.7f0de80f.js.map"
+        }
+      },
+      "chunkNames": [
+        "main"
+      ],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "filteredRelated": 1,
+      "chunks": [
+        179
+      ],
+      "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "html/main/index.html",
+      "size": 2788,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {},
+      "chunkNames": [],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "chunks": [],
+      "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "static/js/runtime-main.adb5035d.js",
+      "size": 1781,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "immutable": true,
+        "contenthash": "adb5035d",
+        "javascriptModule": false,
+        "minimized": true,
+        "related": {
+          "sourceMap": "static/js/runtime-main.adb5035d.js.map"
+        }
+      },
+      "chunkNames": [
+        "runtime-main"
+      ],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "filteredRelated": 1,
+      "chunks": [
+        252
+      ],
+      "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "static/css/main.3834b256.css",
+      "size": 675,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "immutable": true,
+        "contenthash": "3834b256",
+        "minimized": true,
+        "related": {
+          "sourceMap": "static/css/main.3834b256.css.map"
+        }
+      },
+      "chunkNames": [
+        "main"
+      ],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "filteredRelated": 1,
+      "chunks": [
+        179
+      ],
+      "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "route.json",
+      "size": 234,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {},
+      "chunkNames": [],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "chunks": [],
+      "auxiliaryChunks": []
+    }
+  ],
+  "namedChunkGroups": {
+    "main": {
+      "name": "main",
+      "chunks": [
+        252,
+        54,
+        179
+      ],
+      "assets": [
+        {
+          "name": "static/js/runtime-main.adb5035d.js"
+        },
+        {
+          "name": "static/js/54.a218d9d0.js"
+        },
+        {
+          "name": "static/css/main.3834b256.css"
+        },
+        {
+          "name": "static/js/main.7f0de80f.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "filteredAuxiliaryAssets": 4,
+      "auxiliaryAssetsSize": null,
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "generator": "loadable-components",
+  "chunks": [
+    {
+      "id": 179,
+      "files": [
+        "static/css/main.3834b256.css",
+        "static/js/main.7f0de80f.js"
+      ]
+    },
+    {
+      "id": 252,
+      "files": [
+        "static/js/runtime-main.adb5035d.js"
+      ]
+    },
+    {
+      "id": 54,
+      "files": [
+        "static/js/54.a218d9d0.js"
+      ]
+    }
+  ]
+}

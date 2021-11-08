@@ -1,20 +1,14 @@
-import Web3Modal from 'web3modal';
+import Web3Modal from '@actool/web3modal';
 import Web3 from 'web3';
 import { useEffect, useState, useCallback } from 'react';
 import { CHAIN_IDS_MAPPING } from './constant';
 
 const providerOptions = () => ({
-  'custom-binancewallet': {
-    display: {
-      logo: 'https://dex-bin.bnbstatic.com/static/images/icon_dex.svg',
-      name: 'Binance Wallet',
-      description: 'Connect to your Binance Wallet',
-    },
+  binancewallet: {
     package: (window as any).BinanceChain,
-    connector: async (provider: any) => {
-      await provider.enable();
-      return provider;
-    },
+  },
+  metamask: {
+    package: (window as any).ethereum,
   },
 });
 
@@ -22,8 +16,6 @@ const getWeb3Modal = () => {
   const web3modal = new Web3Modal({
     providerOptions: providerOptions(),
     cacheProvider: true,
-    // disableInjectedProvider: true,
-    theme: 'light',
   });
   return web3modal;
 };
@@ -50,14 +42,11 @@ export const ConnectButtons = () => {
     const provider = await web3modal.connect();
     const _web3 = new Web3(provider);
 
-    const accounts = await _web3.eth.getAccounts();
-    setResult({ accounts });
-    setWeb3(_web3);
-    setAccount(accounts[0]);
-
-    const chainId = await _web3.eth.getChainId();
+    // get chainId
+    // const chainId = await _web3.eth.getChainId();
+    const chainId = await provider.request({ method: 'eth_chainId' });
     const setChainId = (_chainId: number) => {
-      const hex = _web3.utils.toHex(_chainId);
+      const hex = _web3.utils.toHex(_chainId || 'unknown');
       setNetwork({
         chainId: _chainId,
         hex,
@@ -66,14 +55,19 @@ export const ConnectButtons = () => {
     };
     setChainId(chainId);
 
-    // Subscribe to accounts change
-    provider.on('accountsChanged', (_accounts: string[]) => {
-      setAccount(_accounts[0]);
-    });
-
     // Subscribe to chainId change
     provider.on('chainChanged', (_chainId: number) => {
       setChainId(Number(_chainId));
+    });
+
+    const accounts = await _web3.eth.getAccounts();
+    setResult({ accounts });
+    setWeb3(_web3);
+    setAccount(accounts[0]);
+
+    // Subscribe to accounts change
+    provider.on('accountsChanged', (_accounts: string[]) => {
+      setAccount(_accounts[0]);
     });
   }, [web3modal]);
 

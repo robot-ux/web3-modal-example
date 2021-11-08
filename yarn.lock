@@ -2,6 +2,18 @@
 # yarn lockfile v1
 
 
+"@actool/web3modal@^1.9.5":
+  version "1.9.5"
+  resolved "https://registry.npmjs.org/@actool/web3modal/-/web3modal-1.9.5.tgz#cb009408e5420f108fe755ead393d1fb3d18e94c"
+  integrity sha512-93ZV+rQ1VJqfYAE85lsE1Mq1xGomKxgKFtZ3jBSfLzbe4R7LOSSna+D8LviTM9ettg9BEV1848tHIEy4P4oReQ==
+  dependencies:
+    detect-browser "^5.1.0"
+    prop-types "^15.7.2"
+    react "^16.8.6"
+    react-dom "^16.8.6"
+    styled-components "^5.1.1"
+    tslib "^1.10.0"
+
 "@babel/code-frame@7.12.11":
   version "7.12.11"
   resolved "https://registry.npmjs.org/@babel/code-frame/-/code-frame-7.12.11.tgz#f4ad435aa263db935b8f10f2c552d23fb716a63f"
@@ -11573,18 +11585,6 @@ web3@^1.6.0:
     web3-net "1.6.0"
     web3-shh "1.6.0"
     web3-utils "1.6.0"
-
-web3modal@^1.9.4:
-  version "1.9.4"
-  resolved "https://registry.npmjs.org/web3modal/-/web3modal-1.9.4.tgz#c5f9b88ec38b22f1efd6960968c68fbdf1e0c4c8"
-  integrity sha512-hnbdbOjkntVFcFliXT9whb8rMk8FJ+dkQIyZlDxTnQ3pHnGTEMNCsWetA6j7CTQd5xwzdq1lYgcswXeFmSf/mA==
-  dependencies:
-    detect-browser "^5.1.0"
-    prop-types "^15.7.2"
-    react "^16.8.6"
-    react-dom "^16.8.6"
-    styled-components "^5.1.1"
-    tslib "^1.10.0"
 
 webidl-conversions@^3.0.0:
   version "3.0.1"

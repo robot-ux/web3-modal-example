@@ -7,7 +7,10 @@ const App = () => (
   <Switch>
     <Route exact={true} path="/">
       <div className="container">
-        <h2 className="description">Web3 Modal Test</h2>
+        <h2 className="description">
+          Web3 Modal Test (
+          <a href="https://github.com/robot-ux/web3-modal-example">Github</a>)
+        </h2>
         <div className="grid">
           <ConnectButtons />
         </div>

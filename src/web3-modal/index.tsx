@@ -126,15 +126,21 @@ export const ConnectButtons = () => {
   }, [web3, account]);
 
   // clear connect
-  const handleClear = async () => {
-    web3modal.clearCachedProvider();
+  const handleClear = () => {
+    web3modal.disconnect();
     setResult({});
     setWeb3({} as Web3);
+  };
+
+  // re-connect
+  const handleReconnect = async () => {
+    await web3modal.reconnect();
   };
 
   return (
     <div>
       <div>
+        <div>Extension: {web3modal.cachedProvider}</div>
         <div className="network">Network: {JSON.stringify(network)}</div>
         <div className="network">Account: {account}</div>
         <div className="display-panel">{JSON.stringify(result, null, 2)}</div>
@@ -145,6 +151,9 @@ export const ConnectButtons = () => {
         </button>
         <button type="button" onClick={handleConnect}>
           Connect
+        </button>
+        <button type="button" onClick={handleReconnect}>
+          ReConnect
         </button>
         <button type="button" onClick={handleSign}>
           Eth_sign

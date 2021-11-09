@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@actool/web3modal@^1.9.5":
-  version "1.9.5"
-  resolved "https://registry.npmjs.org/@actool/web3modal/-/web3modal-1.9.5.tgz#cb009408e5420f108fe755ead393d1fb3d18e94c"
-  integrity sha512-93ZV+rQ1VJqfYAE85lsE1Mq1xGomKxgKFtZ3jBSfLzbe4R7LOSSna+D8LviTM9ettg9BEV1848tHIEy4P4oReQ==
+"@actool/web3modal@^1.9.6":
+  version "1.9.6"
+  resolved "https://registry.npmjs.org/@actool/web3modal/-/web3modal-1.9.6.tgz#d2735e86a280525deb56fc7542c20cce07cbd6a9"
+  integrity sha512-oaJI76RJy+2CLzD2ckODG1XyA30LnObwbAqq4cCSSI6O0nuGJffiPW8KoxFHe20zrtmErP6XL/uZntvnZnOpWA==
   dependencies:
     detect-browser "^5.1.0"
     prop-types "^15.7.2"

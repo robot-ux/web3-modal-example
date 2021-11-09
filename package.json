@@ -8,7 +8,7 @@
     "start": "modern start",
     "new": "modern new",
     "lint": "modern lint",
-    "deploy:gh": "gh-pages -d dist"
+    "deploy:gh": "yarn build && gh-pages -d dist"
   },
   "engines": {
     "node": ">=14.17.6"
@@ -39,7 +39,7 @@
     "modern.config.js"
   ],
   "dependencies": {
-    "@actool/web3modal": "^1.9.5",
+    "@actool/web3modal": "^1.9.6",
     "@modern-js/runtime": "^1.0.0",
     "gh-pages": "^3.2.3",
     "react": "^17.0.1",
